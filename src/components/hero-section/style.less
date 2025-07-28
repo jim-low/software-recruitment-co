@@ -1,0 +1,26 @@
+#hero {
+  position: relative;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    --size: 300px;
+    position: absolute;
+    content: '';
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+  }
+
+  &::before {
+    background-color: orange;
+    top: calc(var(--size) / 2 * -1);
+    left: calc(var(--size) / 2 * -1);
+  }
+
+  &::after {
+    background-color: yellow;
+    bottom: calc(var(--size) / 4 * -1);
+    right: calc(var(--size) / 4 * -1);
+  }
+}
