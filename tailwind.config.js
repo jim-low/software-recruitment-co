@@ -1,6 +1,6 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{tsx,ts,jsx,js,html}'],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       fontSize: {
@@ -24,9 +24,6 @@ module.exports = {
         },
       },
     }
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 }

@@ -42,8 +42,8 @@ export default function LatestJobs() {
   ];
 
   return (
-    <div id='latest-jobs' className="w-full h-[802px] py-[80px] px-[120px] flex flex-col items-center gap-[30px]">
-      <h2 className="text-brand-blue font-bold">Latest Jobs</h2>
+    <div id='latest-jobs' className="w-full h-[802px] py-[80px] px-[120px] flex flex-col items-center gap-[30px] bg-brand-skyblue">
+      <h2 className="text-brand-blue font-bold text-title-medium">Latest Jobs</h2>
 
       <div className="flex items-center justify-evenly gap-[40px]">
         {jobs.map(job => {

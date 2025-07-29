@@ -37,9 +37,9 @@ export default function Footer() {
   ];
 
   return (
-    <div id='footer' className="py-[80px] px-[120px] h-[484px] bg-[blue] text-white flex gap-[24px]">
+    <div id='footer' className="py-[80px] px-[120px] h-[484px] bg-brand-blue text-white flex gap-[24px]">
       <div className="w-1/4">
-        <p className="mb-[30px]">{COMPANY_NAME}</p>
+        <p className="mb-[30px] text-md font-bold">{COMPANY_NAME}</p>
         <div className="flex items-center gap-[20px]">
           {FOOTER_ICONS.map(({ icon: Icon, link }) => {
             return (
@@ -56,7 +56,7 @@ export default function Footer() {
 
         return (
           <div className="flex flex-col w-1/4">
-            <h5 className="mb-[30px]">{title}</h5>
+            <h5 className="mb-[30px] text-[33px] font-bold">{title}</h5>
             <ul>
               {navItems.map(({ label, link }) => {
                 return (
