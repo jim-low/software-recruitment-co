@@ -41,9 +41,9 @@ export default function Footer() {
       <div className="w-1/4">
         <p className="mb-[30px] text-md font-bold">{COMPANY_NAME}</p>
         <div className="flex items-center gap-[20px]">
-          {FOOTER_ICONS.map(({ icon: Icon, link }) => {
+          {FOOTER_ICONS.map(({ icon: Icon, link }, i) => {
             return (
-              <a href={link} target="_blank">
+              <a key={i} href={link} target="_blank">
                 <Icon className="text-[20px]" />
               </a>
             );
@@ -55,12 +55,12 @@ export default function Footer() {
         const { title, navItems } = section;
 
         return (
-          <div className="flex flex-col w-1/4">
+          <div key={title} className="flex flex-col w-1/4">
             <h5 className="mb-[30px] text-[33px] font-bold">{title}</h5>
             <ul>
-              {navItems.map(({ label, link }) => {
+              {navItems.map(({ label, link }, i) => {
                 return (
-                  <li className="mb-[20px]">
+                  <li key={i} className="mb-[20px]">
                     <a href={link} target='_blank'>
                       {label}
                     </a>

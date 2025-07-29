@@ -49,8 +49,8 @@ export default function LatestJobs() {
       <h2 className="text-brand-blue font-bold text-title-medium">Latest Jobs</h2>
 
       <div className="flex items-center justify-evenly gap-[40px]">
-        {jobs.map(job => {
-          return <JobCard {...job} />;
+        {jobs.map((job, i) => {
+          return <JobCard key={i} {...job} />;
         })}
       </div>
 

@@ -65,9 +65,9 @@ export default function JobCard(props: JobCardType) {
       <CardHeader>
         <CardTitle>
           <div className="flex flex-nowrap gap-1">
-            {programmingLanguages.map(item => {
+            {programmingLanguages.map((item, i) => {
               return (
-                <ProgrammingLanguageCard programmingLanguageInfo={item} />
+                <ProgrammingLanguageCard key={i} programmingLanguageInfo={item} />
               );
             })}
           </div>
@@ -80,16 +80,16 @@ export default function JobCard(props: JobCardType) {
         <CardDescription className="flex flex-col gap-[10px]">
           <p className="flex items-center gap-[10px] text-base">
             <MapPin />
-            <p>
+            <span>
               {location}
-            </p>
+            </span>
           </p>
 
           <p className="flex items-center gap-[10px] text-base">
             <CirclePoundSterling />
-            <p>
+            <span>
               {formattedSalary}
-            </p>
+            </span>
           </p>
 
           <p className="flex items-center gap-[10px] text-base mt-[20px]">
