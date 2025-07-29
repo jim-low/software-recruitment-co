@@ -21,7 +21,7 @@ export enum EProgrammingLanguage {
 };
 
 export type ProgrammingLanguageInfo = {
-  text: string;
+  text?: string;
   icon: IconType;
 };
 
@@ -35,12 +35,12 @@ export const PROGRAMMING_LANGUAGES: Record<EProgrammingLanguage, ProgrammingLang
     icon: FaJava,
   },
   [EProgrammingLanguage.C_PLUS_PLUS]: {
-    text: 'C++',
     icon: SiCplusplus,
+    text: 'C++',
   },
   [EProgrammingLanguage.C_HASHTAG]: {
-    text: 'C#',
     icon: TbBrandCSharp,
+    text: 'C Sharp',
   },
 };
 

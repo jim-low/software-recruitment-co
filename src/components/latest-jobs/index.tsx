@@ -1,8 +1,8 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { JobCardType } from "../../types";
+import { JobCardType, VariantType } from "../../types";
 import { EProgrammingLanguage } from "../../constants";
-import dayjs from "dayjs";
 import JobCard from "./job-card";
+import { Button } from "../ui/button";
 
 export default function LatestJobs() {
   const jobs: JobCardType[] = [
@@ -15,7 +15,8 @@ export default function LatestJobs() {
         currency: '£',
       },
       description: 'Odio mi amet commodo convallis nunc. Tincidunt mauris eu egestas eget in aliquam.',
-      postedOn: dayjs('2023-08-29'),
+      postedOn: 1693238400,
+      variant: VariantType.YELLOW
     },
     {
       programmingLanguages: [EProgrammingLanguage.PYTHON, EProgrammingLanguage.JAVA],
@@ -26,7 +27,8 @@ export default function LatestJobs() {
         currency: '£',
       },
       description: 'Odio mi amet commodo convallis nunc. Tincidunt mauris eu egestas eget in aliquam.',
-      postedOn: dayjs('2023-08-29'),
+      postedOn: 1693238400,
+      variant: VariantType.BLUE
     },
     {
       programmingLanguages: [EProgrammingLanguage.C_HASHTAG, EProgrammingLanguage.C_PLUS_PLUS],
@@ -37,7 +39,8 @@ export default function LatestJobs() {
         currency: '£',
       },
       description: 'Odio mi amet commodo convallis nunc. Tincidunt mauris eu egestas eget in aliquam.',
-      postedOn: dayjs('2023-08-29'),
+      postedOn: 1693238400,
+      variant: VariantType.ORANGE
     },
   ];
 
@@ -52,12 +55,17 @@ export default function LatestJobs() {
       </div>
 
       <div className="w-full flex items-center justify-between">
-        <div className="flex items-center">
-          <ArrowLeft />
-          <ArrowRight />
+        <div className="flex items-center gap-[18px]">
+          <Button disabled className="w-[40px] h-[40px] bg-brand-darkblue text-white rounded-full">
+            <ArrowLeft />
+          </Button>
+
+          <Button className="w-[40px] h-[40px] bg-brand-darkblue text-white rounded-full">
+            <ArrowRight />
+          </Button>
         </div>
 
-        <p>View more jobs</p>
+        <p className="text-brand-darkblue font-bold">View more jobs</p>
       </div>
     </div>
   )

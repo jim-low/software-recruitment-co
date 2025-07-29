@@ -23,4 +23,31 @@
     bottom: calc(var(--size) / 4 * -1);
     right: calc(var(--size) / 4 * -1);
   }
+
+  .job-search-button-group {
+    position: relative;
+
+    .job-search-input,
+    .job-search-button {
+      border-radius: 30px;
+      height: 62px;
+      width: 100%;
+    }
+
+    .job-search-input {
+      background-color: var(--brand-white);
+      border: none;
+    }
+
+    .job-search-button {
+      position: absolute;
+      z-index: 69420;
+      top: 0;
+      right: 0;
+      width: 32%;
+      background-color: var(--brand-yellow);
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
 }

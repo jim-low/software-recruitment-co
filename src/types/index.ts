@@ -1,14 +1,22 @@
-import { Dayjs } from "dayjs";
 import { EProgrammingLanguage } from "../constants";
+
+export enum VariantType {
+  YELLOW = 'YELLOW',
+  BLUE = 'BLUE',
+  ORANGE = 'ORANGE',
+}
+
+export type CurrencyType = {
+  amount: string;
+  currency: string; // currency character (eg: $, £)
+}
 
 export type JobCardType = {
   programmingLanguages: EProgrammingLanguage[];
   title: string;
   location: string;
-  salary: {
-    amount: string;
-    currency: string; // currency character (eg: $, £)
-  };
+  salary: CurrencyType;
   description: string;
-  postedOn: Dayjs;
+  postedOn: number;
+  variant?: VariantType;
 };

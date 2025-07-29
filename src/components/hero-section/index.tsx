@@ -10,7 +10,7 @@ export default function HeroSection() {
         <h1 className='text-brand-white text-title-large font-bold'>Elevate your career</h1>
         <div className='job-search-button-group'>
           <Input className='job-search-input' placeholder='E.g. networking' />
-          <Button>Search jobs</Button>
+          <Button className='job-search-button font-bold text-brand-black'>Search jobs</Button>
         </div>
       </div>
       <div className="image-section">
