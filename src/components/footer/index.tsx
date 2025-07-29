@@ -44,7 +44,7 @@ export default function Footer() {
           {FOOTER_ICONS.map(({ icon: Icon, link }) => {
             return (
               <a href={link} target="_blank">
-                <Icon />
+                <Icon className="text-[20px]" />
               </a>
             );
           })}
